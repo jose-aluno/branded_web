@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+ :root {
+    --yellow: #FBC701;
+    --dark-blue: #001524;
+    --off-white: #FFECD1;
+    --bg-color: #EDF2F4;
+    --gray: #B1B1B1;
+
+    @font-face {
+        font-family: "blonde";
+        src: url("../public/fonts/Blonde.otf") format("otf");
+    }
+}
+
