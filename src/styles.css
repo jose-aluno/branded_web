@@ -1,15 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
  :root {
     --yellow: #FBC701;
-    --dark-blue: #001524;
+    --dark-blue: #022F50;
     --off-white: #FFECD1;
     --bg-color: #EDF2F4;
     --gray: #B1B1B1;
+}
 
-    @font-face {
-        font-family: "blonde";
-        src: url("../public/fonts/Blonde.otf") format("otf");
-    }
+@font-face {
+  font-family: "blonde";
+  src: url("/fonts/Blonde.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: sans-serif;
+  width: 100%;
+  min-height: 100vh;
 }
 

@@ -1,4 +1,39 @@
 header {
     max-height: 80px;
+    width: 100%;
+    display: flex;
+    padding: 20px 32px;
+    justify-content: space-between;
+    align-items: center;
+
+    background: linear-gradient(var(--dark-blue), transparent);
+}
+
+h1 {
     font-family: "blonde";
+    font-size: 20px;
+    color: var(--yellow);
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--yellow);
+}
+
+.icon-row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+img.search, img.cart {
+    height: 30px;
+    width: 30px;
+}
+
+img.profile {
+    height: 40px;
+    width: 40px;
 }
