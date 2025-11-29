@@ -1,0 +1,30 @@
+.hero {
+    height:80vh;
+    width: 100%;
+
+    background-color: var(--dark-blue);
+    background-image: url("/images/textures/texture1.png");
+    background-size: cover;      
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    background-image: url("/images/heroBG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    gap: 16px;
+}
+
+.content .logo{
+    max-height: 251px;
+}
+
+

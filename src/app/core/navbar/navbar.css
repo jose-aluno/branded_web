@@ -6,7 +6,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    background: linear-gradient(var(--dark-blue), transparent);
+    /*background: linear-gradient(var(--dark-blue), transparent);*/
 }
 
 h1 {
