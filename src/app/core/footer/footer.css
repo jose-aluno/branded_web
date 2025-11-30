@@ -1,0 +1,75 @@
+footer {
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 80px 80px 40px 80px;
+
+    background-color: var(--bg-color);
+    background-image: url("/images/textures/footer_texture.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-size: 15px;
+    font-family: "Bebas Neue";
+    color: var(--dark-blue);
+    gap: 10px;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+
+    width: 100%;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+}
+
+.options {
+    display: flex;
+    gap: 120px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    font-size: 28px;
+}
+
+h1 {
+    font-family: "Blonde";
+    font-size: 24px;
+    word-spacing: 16px;
+    margin-bottom: 8px;
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: end;
+}
+
+.images img {
+    max-height: 85px;
+    max-width: 174px;
+}
+
+.bot-row {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.bot-row img {
+    max-height: 49px;
+}
+
+.icon {
+    max-height: 40px;
+    max-width: 40px;
+}
