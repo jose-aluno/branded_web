@@ -1,0 +1,94 @@
+.card {
+    max-width: 200px;
+    padding: 16px;
+
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    color: var(--dark-blue);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    box-shadow: 1px 1px 2px 1px #989b9dcc;
+
+    transition: transform 1s ease;
+    transition: box-shadow 1s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 1px 1px 2px 1px #989b9dcc;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+img {
+    width: 100%;
+}
+
+.bot-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+button {
+    background-color: var(--yellow);
+    border: none;
+    color: var(--dark-blue);
+    height: 27.67px;
+    width: 27.67px;
+    display: flex;
+    border-radius: 200px;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.4s ease;
+    transition: box-shadow 0.3s ease;
+}
+
+button img {
+    width: 11.67px;
+    transition: transform 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 1px 1px 2px 1px #989b9dcc;
+}
+
+h3 {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.preco {
+    font-family: "Bebas Neue";
+    font-size: 24px;
+}
+
+.desconto {
+    color: var(--red);
+}
+
+.original {
+    color: var(--gray);
+    font-size: 16px;
+    text-decoration: line-through;
+}
+
+.preco-group {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
