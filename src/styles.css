@@ -11,6 +11,10 @@
     --red: #FF383C;
 }
 
+html {
+  background-color: var(--bg-color);
+}
+
 @font-face {
   font-family: "blonde";
   src: url("/fonts/Blonde.otf") format("opentype");
@@ -57,4 +61,23 @@ body {
 .text:focus-visible {
   border: solid 3px #ffd69c;
   outline: none;
+}
+
+.submit {
+  display: flex;
+  color: var(--dark-blue);
+  height: 56px;
+  padding: 16px;
+  align-items: center;
+  font-family: "Bebas Neue";
+  font-size: 32px;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid var(--dark-blue);
+}
+
+.submit:hover {
+  background-color: #ffa600;
 }
