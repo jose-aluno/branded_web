@@ -9,6 +9,14 @@ header {
     /*background: linear-gradient(var(--dark-blue), transparent);*/
 }
 
+a {
+    text-decoration: none;
+}
+
+a h2:hover {
+    text-decoration: underline;
+}
+
 h1 {
     font-family: "blonde";
     font-size: 20px;

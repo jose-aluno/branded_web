@@ -1,0 +1,20 @@
+.content {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+
+
+    color: var(--dark-blue);
+    font-family: "bebas neue";
+    font-size: 16px;
+}
+
+.products-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
