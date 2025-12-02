@@ -5,10 +5,11 @@ import { HeroSection } from './shared/hero-section/hero-section';
 import { Footer } from './core/footer/footer';
 import { CardProduto } from './features/produtos/card-produto/card-produto';
 import { HighlightCard } from "./features/produtos/highlight-card/highlight-card";
+import { CartItem } from "./features/produtos/cart-item/cart-item";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, HeroSection, Footer, CardProduto, HighlightCard],
+  imports: [RouterOutlet, Navbar, HeroSection, Footer, CardProduto, HighlightCard, CartItem],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
