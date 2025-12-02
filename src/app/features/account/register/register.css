@@ -1,0 +1,63 @@
+.content {
+    background-color: var(--dark-blue);
+    background-image: url("/images/textures/texture3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding-top: 120px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    align-items: center;
+}
+
+.content img {
+    max-width: 200px;
+}
+
+.submit {
+    max-height: 40px;
+    width: 100%;
+    font-size: 20px;
+    justify-content: center;
+    border-color: var(--yellow);
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    font-family: "bebas neue";
+    font-size: 20px;
+    color: var(--off-white);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    font-family: "Blonde";
+    font-size: 20px;
+    word-spacing: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: var(--yellow);
+}
+
+.form-wrapper {
+    display: flex;
+    gap: 16px;
+}
+
+.stripe {
+    max-height: 500px;
+    width: 2px;
+    background-color: var(--off-white);
+}
