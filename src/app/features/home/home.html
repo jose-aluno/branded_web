@@ -3,11 +3,11 @@
 <div class="highlights">
     <h1>New Arrivals</h1>
     <div class="carrossel">
-        <button class="chevron"><img src="/icons/chevronLeft.png" alt="mostrar mais"></button>
-        <highlight-card></highlight-card> <!--Carrossel com 3 cards por vez (limitar para 10 produtos com cadastro mais recente)-->
-        <highlight-card></highlight-card>
-        <highlight-card></highlight-card>
-        <button class="chevron"><img src="/icons/chevronRight.png" alt="mostrar mais"></button>
+        <button class="chevron" (click)="prev()" [disabled]="recentProducts().length <= itemsPerPage"><img src="/icons/chevronLeft.png" alt="mostrar mais"></button>
+        @for (product of visibleProducts(); track product.id) {
+                <highlight-card [product]="product"></highlight-card>
+        }
+        <button class="chevron" (click)="next()" [disabled]="recentProducts().length <= itemsPerPage"><img src="/icons/chevronRight.png" alt="mostrar mais"></button>
     </div>
 </div>
 

@@ -1,7 +1,7 @@
 <div class="card">
-    <img src="https://m.media-amazon.com/images/I/51h8A2mHcXL._UF1000,1000_QL80_.jpg" alt="imagem produto">
+    <img [src]="product().imageUrl" [alt]="product().name">
     <div class="card-info">
-        <h3>Artist</h3>
-        <p>Product Name</p>
+        <h3>{{product().artist}}</h3>
+        <p>{{product().name}}</p>
     </div>
 </div>

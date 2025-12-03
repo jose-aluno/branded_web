@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Product } from '../../../models/product';
 
 @Component({
   selector: 'highlight-card',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './highlight-card.css',
 })
 export class HighlightCard {
-
+  product = input.required<Product>();
 }
