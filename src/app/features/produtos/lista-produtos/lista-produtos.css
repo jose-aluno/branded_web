@@ -18,3 +18,34 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 16px;
 }
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 20px;
+}
+
+.btn-page {
+    height: 40px;
+    width: 40px;
+    border-radius: 200px;
+    border: none;
+    outline: none;
+
+    box-shadow: 1px 1px 2px 1px #989b9dcc;
+
+    transition: transform 1s ease;
+    transition: box-shadow 1s ease;
+}
+
+.btn-page:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 1px 1px 2px 1px #989b9dcc;
+}
+
+.btn-page img {
+    height: 24px;
+}

@@ -1,16 +1,16 @@
 <div class="card">
-    <img src="https://m.media-amazon.com/images/I/51h8A2mHcXL._UF1000,1000_QL80_.jpg" alt="imagem produto">
+    <img class="thumb" [src]="product().imageUrl" alt="imagem produto">
     <div class="card-info">
-        <h3>Product Name</h3>
+        <h3>{{product().name}}</h3>
         <div class="bot-row">
-            @if(true){
+            @if(false){
                 <div class="preco-group">
                     <span class="preco desconto">$67.67</span>
                     <span class="preco original">$80.00</span>
                 </div>
             }
             @else {
-                <span class="preco">$80.00</span>
+                <span class="preco">${{product().price}}</span>
             }
 
             <button><img src="/icons/addIcon.png" alt="add icon"></button>

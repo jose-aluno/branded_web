@@ -1,5 +1,5 @@
 .card {
-    max-width: 200px;
+    width: 200px;
     padding: 16px;
 
     background-color: var(--bg-color);
@@ -30,6 +30,10 @@
 
 img {
     width: 100%;
+}
+
+.thumb {
+    height: 122px;
 }
 
 .bot-row {

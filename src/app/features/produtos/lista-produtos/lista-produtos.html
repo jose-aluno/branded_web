@@ -2,28 +2,38 @@
 
 <div class="content">
     <h1>Our Products</h1>
-    <div class="products-wrapper"> <!--coloquei uma quantidade de 20 cards só pra estilizar rs-->
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-        <card-produto></card-produto>
-    </div>
+    @if (loading()) {
+        <p>Carregando catálogo...</p>
+    } @else {
+        <div class="products-wrapper">
+            @for (product of displayedProducts(); track product.id) {
+                <card-produto [product]="product"></card-produto>
+            } @empty {
+                <p>Nenhum produto encontrado.</p>
+            }
+        </div>
+        @if ( totalPages() > 1 ) {
+            <div class="pagination-controls">
+                <button 
+                    (click)="prevPage()" 
+                    [disabled]="currentPage() === 1"
+                    class="btn-page">
+                    <img src="/icons/chevronLeft.png">
+                </button>
+
+                <span class="page-info">
+                    Página {{ currentPage() }} de {{ totalPages() }}
+                </span>
+
+                <button 
+                    (click)="nextPage()" 
+                    [disabled]="currentPage() === totalPages()"
+                    class="btn-page">
+                    <img src="/icons/chevronRight.png">
+                </button>
+            </div>
+        }
+    }
 </div>
 
 <app-footer></app-footer>
