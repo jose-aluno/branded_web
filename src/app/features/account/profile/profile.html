@@ -1,14 +1,14 @@
 <div class="content">
     <div class="menu">
         <div class="options">
-            <button class="option">Profile Info</button>
-            <button class="option">Adress</button>
-            <button class="option">Purchase History</button>
-            <button class="option">Create Product</button>
+            <button class="option" routerLink="data" routerLinkActive="active">Profile Info</button>
+            <button class="option" routerLink="address" routerLinkActive="active">Address</button>
+            <button class="option" routerLink="orders" routerLinkActive="active">Purchase History</button>
+            <button class="option" routerLink="createProduct" routerLinkActive="active">Create Product</button>
         </div>
         <button class="submit">Log Off</button>
     </div>
     <div class="option-content">
-        
+        <router-outlet></router-outlet>
     </div>
 </div>
