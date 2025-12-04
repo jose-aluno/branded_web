@@ -1,0 +1,54 @@
+.content {
+    background-color: var(--dark-blue);
+    background-image: url('/images/textures/texture1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    height: 100vh;
+    width: 100%;
+}
+
+.menu {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    max-width: 380px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.option {
+    font-family: "bebas neue";
+    color: var(--off-white);
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 10px;
+    text-align: left;
+    padding: 8px 16px 8px 16px;
+    transition: background-color 0.2s ease;
+}
+
+.option:hover {
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.option.active {
+    background-color: #fbc90148; 
+}
+
+.submit {
+    height: 40px;
+    font-size: 20px;
+    justify-content: center;
+    border-color: var(--yellow);
+}

@@ -9,7 +9,7 @@ import { CartItem } from "./features/produtos/cart-item/cart-item";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, HeroSection, Footer, CardProduto, HighlightCard, CartItem],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
