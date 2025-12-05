@@ -1,2 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar (cartClicked)="toggleCart()"></app-navbar>
+@if(showCart()) {
+    <app-cart  (close)="showCart.set(false)"></app-cart>
+}
 <router-outlet />

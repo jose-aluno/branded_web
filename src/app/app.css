@@ -5,3 +5,9 @@ app-navbar {
     width: 100%;
     z-index: 999; 
 }
+
+app-cart{
+    position: fixed;
+    right: 0;   
+    top: 80px;
+}
