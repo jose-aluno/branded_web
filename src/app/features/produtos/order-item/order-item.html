@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="main">
+        <img src="https://m.media-amazon.com/images/I/51h8A2mHcXL._UF1000,1000_QL80_.jpg" alt="imagem produto">
+        <div class="card-info">
+            <h3>Product Name</h3>
+            @if(true){ 
+                    <!-- se for promo <span class="preco">{{product().price | promo: 10 | currency:'USD':'symbol': '1.2-2'}}</span> -->
+            }
+            @else {
+                    <!-- <span class="preco">{{product().price | currency:'USD':'symbol': '1.2-2'}}</span> -->
+            }
+        </div>
+    </div>
+</div>

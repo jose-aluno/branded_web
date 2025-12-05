@@ -1,0 +1,46 @@
+.card {
+    max-height: 105px;
+    padding: 16px;
+    width: 100%;
+
+    background-color: var(--bg-color);
+    color: var(--dark-blue);
+
+    display: flex;
+    justify-content: space-between;
+    align-items:  center;
+    gap: 16px;
+
+    border-bottom: 3px solid var(--gray);
+}
+
+.main {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+img {
+    max-width: 90px;
+}
+
+h3 {
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.preco {
+    font-family: "Bebas Neue";
+    font-size: 24px;
+}

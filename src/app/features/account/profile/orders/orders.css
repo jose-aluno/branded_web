@@ -1,0 +1,21 @@
+.order {
+    color: var(--dark-blue);
+    font-family: "bebas neue";
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 20px;
+}

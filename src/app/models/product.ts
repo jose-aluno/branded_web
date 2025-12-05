@@ -6,5 +6,5 @@ export interface Product {
   price: number;
   imageUrl: string;
   stock: number;   
-  promo: Boolean;    
+  //promo: Boolean;    
 }
