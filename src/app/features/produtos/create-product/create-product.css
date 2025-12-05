@@ -1,0 +1,39 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    font-family: "bebas neue";
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin: auto;
+}
+
+h1 {
+    color: var(--yellow);
+    font-size: 32px
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    font-size: 20px;
+    color: var(--dark-blue);
+    height: 100%;
+}
+
+textarea.text {
+    min-height: 150px;
+}
+
+.text {
+    background-color: var(--bg-color);
+    border-color: var(--dark-blue);
+}

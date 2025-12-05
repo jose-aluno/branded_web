@@ -1,1 +1,59 @@
-<p>create-product works!</p>
+<main>
+    <h1>Create Product</h1>
+    
+    <form [formGroup]="productForm">
+        
+        <div class="label-input">
+            <label for="name">Product Name</label>
+            <input type="text" class="text" id="name" formControlName="name" placeholder="Ex: Disco de Vinil">
+        </div>
+
+        <div class="label-input">
+            <label for="imageUrl">Product Image URL</label>
+            <input type="text" class="text" id="imageUrl" formControlName="imageUrl" placeholder="Ex: https://imgs.com/foto.jpg">
+        </div>
+
+        <div style="display: flex; gap: 16px;">
+            <div class="label-input">
+                <label for="artist">Artist</label>
+                <input type="text" class="text" id="artist" formControlName="artist" placeholder="Artist Name">
+            </div>
+
+            <div class="label-input">
+                <label for="price">Price</label>
+                <input type="number" class="text" id="price" formControlName="price" placeholder="0.00">
+            </div>
+
+            <div class="label-input">
+                <label for="stock">Stock</label>
+                <input type="number" class="text" id="stock" formControlName="stock" placeholder="0">
+            </div>
+
+            <!-- <div class="label-input" style="min-width: 100px;">
+                <label for="promo">Promo</label>
+                <select class="text" id="promo" formControlName="isPromo">
+                    <option [ngValue]="false">No</option>
+                    <option [ngValue]="true">Yes</option>
+                </select>
+            </div> -->
+        </div>
+
+        <div class="label-input">
+            <label for="description">Description</label>
+            <textarea 
+                class="text" 
+                id="description" 
+                formControlName="description"
+                placeholder="Product details...">
+            </textarea>
+        </div>
+
+    </form>
+
+    <button 
+        class="submit" 
+        (click)="onSubmit()"
+        [disabled]="productForm.invalid">
+        Create Product
+    </button>
+</main>
