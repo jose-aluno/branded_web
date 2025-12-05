@@ -5,5 +5,6 @@ export interface Product {
   artist: string;
   price: number;
   imageUrl: string;
-  stock: number;       
+  stock: number;   
+  promo: Boolean;    
 }
