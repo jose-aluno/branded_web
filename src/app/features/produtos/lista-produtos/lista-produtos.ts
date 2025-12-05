@@ -54,4 +54,8 @@ export class ListaProdutos {
       this.currentPage.update(p => p - 1);
     }
   }
+
+  onViewProduct(id: String){
+    this.router.navigate(['/product', id])
+  }
 }

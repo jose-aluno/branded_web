@@ -7,10 +7,12 @@ import { Data } from './features/account/profile/data/data';
 import { Address } from './features/account/profile/address/address';
 import { Orders } from './features/account/profile/orders/orders';
 import { CreateProduct } from './features/produtos/create-product/create-product';
+import { ViewProduct } from './features/produtos/view-product/view-product';
 
 export const routes: Routes = [
     {path: '', component: Home},
     {path: 'products', component: ListaProdutos},
+    {path: 'product/:id', component: ViewProduct},
     {path: 'register', component: Register},
     {path: 'profile', component: Profile, children: [
       { path: '', redirectTo: 'data', pathMatch: 'full' },
