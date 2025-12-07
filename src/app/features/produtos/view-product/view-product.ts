@@ -3,10 +3,12 @@ import { Footer } from '../../../core/footer/footer';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../services/product/product-service';
 import { Product } from '../../../models/product';
+import { CurrencyPipe } from '@angular/common';
+import { PromoPipe } from '../../../shared/pipes/promo-pipe';
 
 @Component({
   selector: 'app-view-product',
-  imports: [Footer],
+  imports: [Footer, CurrencyPipe, PromoPipe],
   templateUrl: './view-product.html',
   styleUrl: './view-product.css',
 })
