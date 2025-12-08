@@ -7,7 +7,7 @@
     } @else {
         <div class="products-wrapper">
             @for (product of displayedProducts(); track product.id) {
-                <card-produto [product]="product"></card-produto>
+                <card-produto [product]="product" (view)="onViewProduct($event)"></card-produto>
             } @empty {
                 <p>Nenhum produto encontrado.</p>
             }

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Product } from '../../../models/product';
 import { CurrencyPipe } from '@angular/common';
 import { PromoPipe } from '../../../shared/pipes/promo-pipe';
@@ -12,5 +12,11 @@ import { PromoPipe } from '../../../shared/pipes/promo-pipe';
 export class CardProduto {
   product = input.required<Product>();
 
+  view = output<string>();
 
+  onView() {
+    const id = this.product().id;
+    if (!id) return;
+    this.view.emit(id);
+  }
 }
