@@ -10,5 +10,5 @@ import { PromoPipe } from '../../../shared/pipes/promo-pipe';
   styleUrl: './cart-item.css',
 })
 export class CartItem {
-  product = input.required<Product>();
+  //product = input.required<Product>();
 }

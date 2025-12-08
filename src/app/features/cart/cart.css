@@ -1,5 +1,47 @@
 *{
-    height: 100vh;
-    background: var(--bg-color);
-    padding: 16px;
+    color: var(--dark-blue);
+    font-family: "Bebas Neue";
+    font-size: 32px;
 }
+
+.main{
+    position: relative;
+    background: var(--bg-color);
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 450px;
+}
+
+.products{
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.finalize{
+    width: 100%; 
+    padding-top: 10px; 
+    flex-shrink: 0;
+
+    .totalPrice{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        .price__decimal{
+            font-size: 70%;
+        }
+    }
+
+    button{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background-color: var(--yellow);
+    }
+}
+
+
