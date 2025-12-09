@@ -16,17 +16,6 @@ export class AddressProfile {
 
   constructor(private addressService: AddressService, private fb: FormBuilder){}
 
-  address: Address = {
-    cep: '',
-    city: '',
-    state: '',
-    street: '',
-    neighborhood: '',
-    houseNumber: '',
-    aptNumber: '',
-    userId: this.user.id
-  }
-
   ngOnInit(): void {
     this.addressForm = this.fb.group({
       cep: ['', Validators.required],
