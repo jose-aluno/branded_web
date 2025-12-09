@@ -1,10 +1,16 @@
 <div class="main">
     <div class="products">
-        <cart-item></cart-item>
-        <cart-item></cart-item>
-        <cart-item></cart-item>
-        <cart-item></cart-item>
-        <cart-item></cart-item>
+        @if (loading()) {
+            <p>Carregando carrinho...</p>
+        } 
+        @else if (!cart() || cart().items.length === 0) {
+            <p>Seu carrinho está vazio.</p>
+        } 
+        @else {
+            @for (item of cart().items; track item.id) {
+                <cart-item [item]="item" (cartChanged)="loadCart()"></cart-item>
+            }
+        }
     </div>
 
     <div class="finalize">
@@ -12,8 +18,7 @@
         <div class="totalPrice">
             <p>Total</p>
             <div>
-                <span class="price__intenger">$89</span>
-                <span class="price__decimal">.90</span>
+                <span class="price">{{ cart().totalValue | currency:'USD':'symbol': '1.2-2' }}</span>
             </div>
         </div>
         <button>Finalizar Compra</button>

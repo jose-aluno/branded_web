@@ -1,55 +1,38 @@
-<!-- <div class="card">
-    <div class="main">
-        <img src="https://m.media-amazon.com/images/I/51h8A2mHcXL._UF1000,1000_QL80_.jpg" alt="imagem produto">
-        <div class="card-info">
-            <h3>Product Name</h3>
-            <div class="bot-row">
-                @if(product().promo){
-                    <div class="preco-group">
-                        <span class="preco desconto">{{product().price | promo: 10 | currency:'USD':'symbol': '1.2-2'}}</span>
-                        <span class="preco original">{{product().price | currency:'USD':'symbol': '1.2-2'}}</span>
-                    </div>
-                }
-                @else {
-                    <span class="preco">{{product().price | currency:'USD':'symbol': '1.2-2'}}</span>
-                }
-
-                <div class="counter">
-                    <button>&plus;</button>
-                    <p>1</p>
-                    <button>&minus;</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <button><img src="/icons/Trash.png" alt="ícone de lixeira"></button>
-</div> DESCOMENTAR ESSE QUANDO IMPLEMENTAR LÒGICA DE CARRINHO --> 
-
 <div class="card">
     <div class="main">
-        <img src="https://m.media-amazon.com/images/I/51h8A2mHcXL._UF1000,1000_QL80_.jpg" alt="imagem produto">
+        <img [src]="item().product.imageUrl" [alt]="item().product.name">
+        
         <div class="card-info">
-            <h3>Product Name</h3>
+            <h3>{{ item().product.name }}</h3>
+            
             <div class="bot-row">
-                @if(true){
+                @if(item().product.promo){
                     <div class="preco-group">
-                        <span class="preco desconto">{{79.99 | promo: 10 | currency:'USD':'symbol': '1.2-2'}}</span>
-                        <span class="preco original">{{80.99 | currency:'USD':'symbol': '1.2-2'}}</span>
+                        <span class="preco desconto">
+                            {{ item().product.price | promo: 10 | currency:'USD':'symbol': '1.2-2' }}
+                        </span>
+                        <span class="preco original">
+                            {{ item().product.price | currency:'USD':'symbol': '1.2-2' }}
+                        </span>
                     </div>
-                }
-                @else {
-                    <span class="preco">{{89.99 | currency:'USD':'symbol': '1.2-2'}}</span>
+                } @else {
+                    <span class="preco">
+                        {{ item().product.price | currency:'USD':'symbol': '1.2-2' }}
+                    </span>
                 }
 
                 <div class="counter">
-                    <button>&plus;</button>
-                    <p>1</p>
-                    <button>&minus;</button>
+                    <button (click)="increment()" [disabled]="item().quantity >= item().product.stock">&plus;</button>
+                    
+                    <p>{{ item().quantity }}</p>
+                    
+                    <button (click)="decrement()" [disabled]="item().quantity <= 1">&minus;</button>
                 </div>
-
             </div>
         </div>
     </div>
-    <button><img src="/icons/Trash.png" alt="ícone de lixeira"></button>
+
+    <button (click)="remove()">
+        <img src="/icons/Trash.png" alt="ícone de lixeira">
+    </button>
 </div>
