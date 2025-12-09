@@ -7,10 +7,11 @@ import { CardProduto } from './features/produtos/card-produto/card-produto';
 import { HighlightCard } from "./features/produtos/highlight-card/highlight-card";
 import { CartItem } from "./features/produtos/cart-item/cart-item";
 import { Cart } from './features/cart/cart';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Cart],
+  imports: [RouterOutlet, Navbar, Cart, FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
