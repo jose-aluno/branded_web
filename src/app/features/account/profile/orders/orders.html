@@ -1,8 +1,25 @@
-<div class="order"> <!--for aqui pra cada order do usuário-->
-    <div class="header">
-        <h1>Data</h1>
-        <h3>preço</h3>
-    </div>
-    <div style="width: 100%; height: 3px; background-color: var(--dark-blue); margin-bottom: 8px;"></div>
-    <app-order-item></app-order-item> <!--for aqui pra cada item da order-->
+<div class="orders-container">
+    @if(loading()){
+        <p>Carregando histórico...</p>
+    } 
+    @else {
+        @for (order of orders(); track order.id) {
+            <div class="order">
+                <div class="header">
+                    <h1>{{ order.createdAt | date:'dd/MM/yyyy' }}</h1>
+                    
+                    <h3>{{ order.totalValue | currency:'USD':'symbol':'1.2-2' }}</h3>
+                </div>
+                
+                <div style="width: 100%; height: 3px; background-color: var(--dark-blue); margin-bottom: 8px;"></div>
+                
+                @for (item of order.items; track item.id) {
+                    <app-order-item [item]="item"></app-order-item>
+                }
+            </div>
+        } 
+        @empty {
+            <p>Você ainda não fez nenhum pedido.</p>
+        }
+    }
 </div>

@@ -19,3 +19,14 @@ h1 {
 h3 {
     font-size: 20px;
 }
+
+p {
+    font-family: "Montserrat";
+    color: var(--dark-blue);
+}
+
+.orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}

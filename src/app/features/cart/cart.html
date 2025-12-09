@@ -21,6 +21,6 @@
                 <span class="price">{{ cart().totalValue | currency:'USD':'symbol': '1.2-2' }}</span>
             </div>
         </div>
-        <button>Finalizar Compra</button>
+        <button (click)="checkout()">Finalizar Compra</button>
     </div>
 </div>

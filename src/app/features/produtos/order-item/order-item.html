@@ -1,13 +1,24 @@
 <div class="card">
     <div class="main">
-        <img src="https://m.media-amazon.com/images/I/51h8A2mHcXL._UF1000,1000_QL80_.jpg" alt="imagem produto">
+        <img [src]="item().product.imageUrl" [alt]="item().product.name">
+        
         <div class="card-info">
-            <h3>Product Name</h3>
-            @if(true){ 
-                    <!-- se for promo <span class="preco">{{product().price | promo: 10 | currency:'USD':'symbol': '1.2-2'}}</span> -->
+            <div class="header-info">
+                <h3>{{ item().product.name }}</h3>
+                <span class="quantity">x{{ item().quantity }}</span>
+            </div>
+
+            @if(item().product.promo){ 
+                <div class="price-container">
+                     <span class="preco desconto">
+                        {{ item().product.price | promo: 10 | currency:'USD':'symbol': '1.2-2' }}
+                     </span>
+                     </div>
             }
             @else {
-                    <!-- <span class="preco">{{product().price | currency:'USD':'symbol': '1.2-2'}}</span> -->
+                <span class="preco">
+                    {{ item().product.price | currency:'USD':'symbol': '1.2-2' }}
+                </span>
             }
         </div>
     </div>
