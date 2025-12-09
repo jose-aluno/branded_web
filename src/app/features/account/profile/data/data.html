@@ -1,26 +1,23 @@
-<form action="">
+<form [formGroup]="profileForm" (ngSubmit)="onSave()">
+    
     <h1>Profile</h1>
     <div class="label-input">
         <label for="name">Full Name</label>
-        <input type="text" class="text" id="name" placeholder="Insert your email here...">
+        <input type="text" class="text" id="name" formControlName="name" placeholder="Insert your full name here...">
     </div>
     <div class="label-input">
         <label for="email">Email</label>
-        <input type="text" class="text" id="email" placeholder="Insert your email here...">
+        <input type="email" class="text" id="email" formControlName="email" placeholder="Insert your email here...">
     </div>
     <h1>Change your password</h1>
     <div class="label-input">
-        <label for="crt_pwd">Current password</label>
-        <input type="password" class="text" id="crt_pwd" placeholder="Insert your email here...">
-    </div>
-    <div class="label-input">
         <label for="new_pwd">New Password</label>
-        <input type="text" class="text" id="new_pwd" placeholder="Insert your email here...">
+        <input type="password" class="text" id="new_pwd" formControlName="newPassword" placeholder="Insert your new password...">
     </div>
     <div class="label-input">
         <label for="new_pwd2">Repeat new password</label>
-        <input type="text" class="text" id="new_pwd2" placeholder="Insert your email here...">
+        <input type="password" class="text" id="new_pwd2" formControlName="confirmNewPassword" placeholder="Repeat your new password...">
     </div>
 
-    <button class="submit">Save Changes</button>
+    <button class="submit" type="submit">Save Changes</button>
 </form>

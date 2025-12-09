@@ -35,6 +35,21 @@ export class Auth {
     return null
   }
 
+  getUserIdFromStorage(): string | null {
+    if (typeof localStorage !== 'undefined') {
+      const userDataStr = localStorage.getItem('user_data');
+      if (userDataStr) {
+        try {
+          const userData = JSON.parse(userDataStr);
+          return userData.id;
+        } catch (e) {
+          return null;
+        }
+      }
+    }
+    return null;
+  }
+
   isLoggedIn(): boolean {
     const token = this.getToken()
     return !!token
