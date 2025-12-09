@@ -6,7 +6,7 @@
             <h3>{{product()?.artist}}</h3>
             <p>{{product()?.description}}</p>
             <div class="bot-row">
-                @if(true){
+                @if(product()?.promo){
                     <div class="preco-group">
                         <span class="preco desconto">{{product()!.price | promo: 10 | currency:'USD':'symbol': '1.2-2'}}</span>
                         <span class="preco original">{{product()!.price | currency:'USD':'symbol': '1.2-2'}}</span>
