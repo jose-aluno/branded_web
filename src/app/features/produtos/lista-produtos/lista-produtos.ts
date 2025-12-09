@@ -30,17 +30,21 @@ export class ListaProdutos {
     { initialValue: [] }
   );
 
+  availableProducts = computed(() => {
+    return this.allProducts().filter(p => p.stock > 0);
+  });
+
+  totalPages = computed(() => {
+    return Math.ceil(this.availableProducts().length / this.itemsPerPage);
+  });
+
   displayedProducts = computed(() => {
-    const products = this.allProducts();
+    const products = this.availableProducts();
     const page = this.currentPage();
     const startIndex = (page - 1) * this.itemsPerPage;
     const endIndex = startIndex + this.itemsPerPage;
 
     return products.slice(startIndex, endIndex);
-  });
-
-  totalPages = computed(() => {
-    return Math.ceil(this.allProducts().length / this.itemsPerPage);
   });
 
   nextPage() {
