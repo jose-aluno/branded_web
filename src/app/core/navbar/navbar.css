@@ -45,3 +45,7 @@ img.profile {
     height: 40px;
     width: 40px;
 }
+
+.profile, .cart {
+    cursor: pointer;
+}

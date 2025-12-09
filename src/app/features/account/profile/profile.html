@@ -6,7 +6,7 @@
             <button class="option" routerLink="orders" routerLinkActive="active">Purchase History</button>
             <button class="option" routerLink="createProduct" routerLinkActive="active">Create Product</button>
         </div>
-        <button class="submit">Log Off</button>
+        <button class="submit" (click)="onLogout()">Log Off</button>
     </div>
     <div class="option-content">
         <router-outlet></router-outlet>

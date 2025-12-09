@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { Auth } from '../../../services/auth';
 
 @Component({
   selector: 'app-profile',
@@ -8,5 +9,10 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrl: './profile.css',
 })
 export class Profile {
+  constructor( private authService: Auth, private router: Router ) {}
 
+  onLogout() {
+    this.authService.logout();
+    this.router.navigate(['/']);
+  }
 }
