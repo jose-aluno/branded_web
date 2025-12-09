@@ -3,32 +3,32 @@
     <form action="">
         <div class="label-input" style="max-width: 160px;">
             <label for="cep">CEP</label>
-            <input type="text" class="text" id="cep" placeholder="Insert your email here...">
+            <input [(ngModel)]="address.cep" name="cep" type="text" class="text" id="cep" placeholder="Insert your email here...">
         </div>
         <div class="label-input" style="min-width: 390px;">
             <label for="city">City</label>
-            <input type="text" class="text" id="city" placeholder="Insert your email here...">
+            <input [(ngModel)]="address.city" name="city" type="text" class="text" id="city" placeholder="Insert your email here...">
         </div>
         <div class="label-input" style="max-width: 200px;">
             <label for="state">State</label>
-            <input type="text" class="text" id="state" placeholder="Insert your email here...">
+            <input [(ngModel)]="address.state" name="state" type="text" class="text" id="state" placeholder="Insert your email here...">
         </div>
         <div class="label-input">
             <label for="street">Street</label>
-            <input type="text" class="text" id="street" placeholder="Insert your email here...">
+            <input [(ngModel)]="address.street" name="street" type="text" class="text" id="street" placeholder="Insert your email here...">
         </div>
         <div class="label-input">
             <label for="nghbhood">Neighbourhood</label>
-            <input type="text" class="text" id="nghbhood" placeholder="Insert your email here...">
+            <input [(ngModel)]="address.neighborhood" name="neighborhood" type="text" class="text" id="nghbhood" placeholder="Insert your email here...">
         </div>
         <div class="label-input">
             <label for="nmbr">House Number</label>
-            <input type="text" class="text" id="nmbr" placeholder="Insert your email here...">
+            <input [(ngModel)]="address.houseNumber" name="houseNumber" type="text" class="text" id="nmbr" placeholder="Insert your email here...">
         </div>
         <div class="label-input">
             <label for="complement">complement</label>
-            <input type="text" class="text" id="complement" placeholder="Insert your email here...">
+            <input [(ngModel)]="address.aptNumber" name="aptNumber" type="text" class="text" id="complement" placeholder="Insert your email here...">
         </div>
     </form>
-    <button class="submit">Save Changes</button>
+    <button class="submit" (click)="createAddress()">Save Changes</button>
 </main>
