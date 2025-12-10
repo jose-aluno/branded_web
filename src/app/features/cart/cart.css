@@ -30,18 +30,12 @@
         padding: 10px;
         display: flex;
         justify-content: space-between;
-
-        .price__decimal{
-            font-size: 70%;
-        }
     }
+}
 
-    button{
-        width: 100%;
-        box-sizing: border-box;
-        border-radius: 10px;
-        background-color: var(--yellow);
-    }
+.submit {
+    width: 100%;
+    justify-content: center;
 }
 
 

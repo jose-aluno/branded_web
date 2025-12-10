@@ -17,10 +17,8 @@
         <hr>
         <div class="totalPrice">
             <p>Total</p>
-            <div>
-                <span class="price">{{ cart().totalValue | currency:'USD':'symbol': '1.2-2' }}</span>
-            </div>
+            <span class="price">{{ cart().totalValue | currency:'USD':'symbol': '1.2-2' }}</span>
         </div>
-        <button (click)="checkout()">Finalizar Compra</button>
+        <button class="submit" (click)="checkout()">Finalizar Compra</button>
     </div>
 </div>
