@@ -16,6 +16,8 @@ main {
     display: flex;
     gap: 24px;
     color: var(--dark-blue);
+    min-height: 70vh;
+    align-items: center;
 }
 
 img {

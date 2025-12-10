@@ -31,9 +31,15 @@ h1 {
 
 textarea.text {
     min-height: 150px;
+    padding-top: 16px;
 }
 
 .text {
     background-color: var(--bg-color);
     border-color: var(--dark-blue);
+}
+
+.text.ng-invalid.ng-touched {
+    border-color: red;
+    border-width: 2px;
 }
