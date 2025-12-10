@@ -5,7 +5,7 @@
     <div class="carrossel">
         <button class="chevron" (click)="prev()" [disabled]="recentProducts().length <= itemsPerPage"><img src="/icons/chevronLeft.png" alt="mostrar mais"></button>
         @for (product of visibleProducts(); track product.id) {
-                <highlight-card [product]="product"></highlight-card>
+                <highlight-card [product]="product" (view)="onViewProduct($event)"></highlight-card>
         }
         <button class="chevron" (click)="next()" [disabled]="recentProducts().length <= itemsPerPage"><img src="/icons/chevronRight.png" alt="mostrar mais"></button>
     </div>

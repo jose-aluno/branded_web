@@ -2,7 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { HeroSection } from '../../shared/hero-section/hero-section';
 import { Footer } from '../../core/footer/footer';
 import { HighlightCard } from "../produtos/highlight-card/highlight-card";
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ProductService } from '../../services/product/product-service';
 
@@ -14,11 +14,14 @@ import { ProductService } from '../../services/product/product-service';
 })
 export class Home {
   private productService = inject(ProductService);
+  private router = inject(Router)
 
   private allProducts = toSignal(this.productService.findAll(), { initialValue: [] });
   
   recentProducts = computed(() => {
-    return [...this.allProducts()].reverse().slice(0, 10);
+    const available = this.allProducts().filter(p => p.stock > 0);
+    
+    return [...available].reverse().slice(0, 10);
   });
 
   currentIndex = signal(0);
@@ -53,5 +56,9 @@ export class Home {
     } else {
       this.currentIndex.set(max);
     }
+  }
+
+  onViewProduct(id: String){
+    this.router.navigate(['/product', id])
   }
 }
