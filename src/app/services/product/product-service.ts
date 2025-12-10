@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Product } from '../../models/product';
 import { Observable } from 'rxjs';
 
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
   private readonly apiUrl = 'https://branded-api.onrender.com/branded/products';
 
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient)
 
   findAll(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);

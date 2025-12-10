@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class AddressService {
   private readonly apiUrl = 'https://branded-api.onrender.com/branded/address';
 
-  constructor(private http: HttpClient){}
+  private http = inject(HttpClient)
 
   findByUserId(id: string): Observable<Address>{
     return this.http.get<Address>(`${this.apiUrl}/${id}`,)

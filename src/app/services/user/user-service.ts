@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { User } from '../../models/user';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class UserService {
   private readonly apiUrl = 'https://branded-api.onrender.com/branded/users'
 
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient)
 
   findById(id: string): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/${id}`);

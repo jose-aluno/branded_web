@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { LoginResponse, User } from '../models/user';
 import { Observable, tap } from 'rxjs';
 
@@ -9,7 +9,7 @@ import { Observable, tap } from 'rxjs';
 export class Auth {
   private readonly apiUrl = 'https://branded-api.onrender.com/branded'
 
-  constructor(private http: HttpClient) { }
+  private http = inject(HttpClient)
 
   login(credentials: {email: string, password: string}): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${this.apiUrl}/login`, credentials)
