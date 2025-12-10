@@ -42,7 +42,10 @@ export class AddressProfile {
 
     if (this.addressId) {
       this.addressService.updateAddress(this.addressId, payload).subscribe({
-        next: (res) => console.log("Endereço atualizado!", res),
+        next: (res) => {
+          console.log("Endereço atualizado!", res)
+          alert("Endereço Atualizado");
+        }, 
         error: (err) => console.error(err)
       });
     } else {
@@ -50,6 +53,7 @@ export class AddressProfile {
       this.addressService.createAddress(createPayload).subscribe({
         next: (res) => {
           console.log("Endereço criado!", res);
+          alert("Endereço Criado");
           this.addressId = res.id;
         },
         error: (err) => console.error(err)
