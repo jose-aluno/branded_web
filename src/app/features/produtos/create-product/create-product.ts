@@ -21,7 +21,7 @@ export class CreateProduct {
     artist: ['', Validators.required],
     price: [null, [Validators.required, Validators.min(0.01)]],
     stock: [null, [Validators.required, Validators.min(0)]],
-    isPromo: [false], 
+    promo: [false], 
     description: ['']
   });
 
