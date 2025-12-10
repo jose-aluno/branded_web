@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { LoginResponse, User } from '../models/user';
-import { Observable, tap } from 'rxjs';
+import { Observable, switchMap, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -24,8 +24,19 @@ export class Auth {
       );
   }
 
-  register(userData: User): Observable<{message: string, user: User}> {
+  register(userData: User): Observable<LoginResponse> {
     return this.http.post<{message: string, user: User}>(`${this.apiUrl}/users`, userData)
+      .pipe(
+        switchMap(() => {
+            if (!userData.password) {
+                throw new Error("Senha necessária para auto-login");
+            }
+            return this.login({ 
+                email: userData.email, 
+                password: userData.password 
+            });
+        })
+      );
   }
 
   getToken(): string | null {
