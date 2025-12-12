@@ -39,10 +39,16 @@ img {
 h3 {
     font-family: "Bebas Neue";
     font-size: 32px;
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis; 
 }
 
 p {
     font-family: "Montserrat";
     font-size: 20px;
     font-weight: 300;
+    white-space: nowrap;      
+    overflow: hidden;         
+    text-overflow: ellipsis; 
 }
